@@ -1,0 +1,79 @@
+Primitive Data Types:- (immutable)
+Primitive data types are the most basic types of data and are immutable. They represent single values and do not have methods or properties.
+
+Non-Primitive or Reference Data Types:- (mutable)
+Non-primitive data types are more complex and are mutable. These types are objects that can hold collections of values and more complex entities. They are stored as references to the memory location where the object is kept.
+
+Primitive Types: 
+
+Number:
+*Represents both integer and floating-point numbers
+
+            let age = 25;           // integer
+            let temperature = 98.6; // floating-point
+
+String:
+*Represents sequences of characters. Strings are enclosed in ('), ("), or (`).
+
+            let name = "Alice";
+            let greeting = `Hello, ${name}!`; // template literal
+
+Boolean:
+*Represents a value that can be either true or false
+
+            let isActive = true;
+            let isLoggedIn = false;
+
+Undefined:
+*Represents a variable that has been declared but not yet assigned a value.
+
+            let x;
+            console.log(x); // undefined
+
+Null:
+*Represents the absence of value. It's often used to indicate that a variable should be empty.
+
+            let user = null;
+
+Symbol:
+*Represents a unique and immutable value used primarily as an object property key
+
+            let uniqueID = Symbol('id');
+
+BigInt:
+*Represents whole numbers larger than 2^53 - 1.(ES6)
+
+            let bigNumber = BigInt(123456789012345678901234567890);
+
+Non-Primitive Types: 
+
+Object:
+*Represents a collection of key-value pairs where values can be of any type (primitive or non-primitive).
+
+            let person = {
+            name: "Likith",
+            age: 22,
+            isEmployed: true
+            };
+
+Array:
+*A special type of object used to store ordered collections of values. Arrays can hold values of any type and are indexed by integers.
+
+            let colors = ["red", "green", "blue"];
+
+Function:
+*Functions are objects in JavaScript and can be used as values. They can be stored in variables, passed as arguments, and returned from other functions.
+
+            function greet(name) {
+            return `Hello, ${name}!`;
+            }
+
+Date:
+*Represents dates and times. It’s a built-in object with methods to manipulate and format dates.
+            
+            let now = new Date();
+
+RegExp:
+*Represents regular expressions used for pattern matching within strings.
+
+            let pattern = /ab+c/;
