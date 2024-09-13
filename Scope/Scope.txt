@@ -1,0 +1,25 @@
+Scope:-
+
+Global Scope: Variables declared outside of any function or block are in the global scope and are accessible anywhere in the code.
+
+            var globalVar = 'global';
+            function example() {
+            console.log(globalVar); // 'global'
+            }
+            example();
+
+Function Scope: Variables declared with var inside a function are only accessible within that function.
+
+            function example() {
+            var localVar = 'function scope';
+            console.log(localVar); // 'function scope'
+            }
+            console.log(localVar); // ReferenceError: localVar is not defined
+
+Block Scope: Variables declared with let and const inside a block ({}) are only accessible within that block.
+
+            if (true) {
+            let blockVar = 'block scope';
+            console.log(blockVar); // 'block scope'
+            }
+            console.log(blockVar); // ReferenceError: blockVar is not defined
