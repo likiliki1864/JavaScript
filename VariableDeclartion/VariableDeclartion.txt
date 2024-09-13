@@ -1,0 +1,81 @@
+Types of Variable Declaration:-
+
+-> var:-
+
+Scope: Function-scoped or globally scoped (if declared outside a function).
+
+Hoisting: Variables declared with var are hoisted to the top of their scope, meaning they can be used before they are declared, though they will be undefined until the declaration is reached.
+
+Reassignment: Variables declared with var can be reassigned.
+
+Redeclaration: Variables declared with var can be redeclared within the same scope.
+
+                var x = 10;
+                console.log(x); // 10
+
+                if (true) {
+                var x = 20; // Same variable, function-scoped
+                console.log(x); // 20
+                }
+                console.log(x); // 20
+
+Global Declaration: When declared outside of any function or block, var creates a global variable, which is a property of the global object (window in browsers).
+
+                var globalVar = 'I am global';
+                console.log(window.globalVar); // 'I am global'
+
+Disadvantages of var:
+
+*Function-scoped rather than block-scoped, leading to potential scope issues.
+*Hoisting can cause unexpected behavior since only the declaration is hoisted, not the initialization.
+*Allows redeclaration in the same scope, which can lead to bugs.
+
+-> let:-
+
+Scope: Block-scoped.
+
+Hoisting: Variables declared with let are hoisted, but not initialized. Accessing them before their declaration results in a ReferenceError due to the "temporal dead zone."
+
+Reassignment: Variables declared with let can be reassigned.
+
+Redeclaration: Variables declared with let cannot be redeclared in the same block scope.
+
+                let y = 30;
+                console.log(y); // 30
+
+                if (true) {
+                let y = 40; // Different variable, block-scoped
+                console.log(y); // 40
+                }
+                console.log(y); // 30
+
+Global Declaration: When declared outside of any function or block, let creates a global variable, but it does not attach it to the global object.
+
+                let globalLet = 'I am global';
+                console.log(globalLet); // 'I am global'                
+
+-> const:-
+
+Scope: Block-scoped (like let).
+
+Hoisting: Variables declared with const are hoisted, but not initialized. Accessing them before their declaration results in a ReferenceError due to the "temporal dead zone."
+
+Reassignment: Variables declared with const cannot be reassigned once initialized.
+
+Redeclaration: Variables declared with const cannot be redeclared in the same block scope.
+
+                const z = 50;
+                console.log(z); // 50
+
+                if (true) {
+                const z = 60; // Different variable, block-scoped
+                console.log(z); // 60
+                }
+                console.log(z); // 50
+
+Global Declaration: When declared outside of any function or block, const creates a global variable, but it does not attach it to the global object.
+
+                const globalConst = 'I am global';
+                console.log(globalConst); // 'I am global'
+
+
