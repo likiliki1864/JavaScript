@@ -1,0 +1,48 @@
+*Synchronous and Asynchronous operations refer to how code execution is managed and how tasks are handled,
+particularly in relation to timing and order of execution.
+
+->Synchronous:-
+*Synchronous code is executed line by line, meaning each line of code waits for the previous line to complete
+before it is executed.
+
+    Characteristics:
+    Blocking: Each operation must complete before the next one starts.
+    Order of Execution: Operations are performed in the order they appear in the code.
+
+    Example:
+        console.log('Start');
+        function syncOperation() {
+        for (let i = 0; i < 3; i++) {
+            console.log(i); // Logs 0, 1, 2
+        }
+        }
+        syncOperation();
+        console.log('End');
+
+        O/P: 
+            Start
+            0
+            1
+            2
+            End
+->Asynchronous:-
+*Asynchronous code allows operations to run independently of the main execution thread,
+meaning that other code can continue running while waiting for certain tasks to complete.
+
+    Characteristics:
+       Non-Blocking: The main thread can continue executing other code while waiting for
+       the asynchronous task to complete.
+       Order of Execution: The order in which asynchronous tasks complete is not guaranteed
+       to be the same as the order in which they were initiated.
+
+    Example:
+        console.log('Start');
+        setTimeout(function() {
+            console.log('This is asynchronous');
+        }, 1000); // Executes after 1 second
+        console.log('End');
+
+        O/P:
+            Start
+            End
+            This is asynchronous
