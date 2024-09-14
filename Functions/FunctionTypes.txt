@@ -1,0 +1,58 @@
+Functions:-
+*Functions are fundamental building blocks used to perform tasks, compute values, and handle events.
+
+Types of Functions:-
+
+->Regular Functions:(Hoisted)
+
+*These are the traditional way to define functions in JavaScript, where the function has a name.
+
+    Syntax:
+            function functionName(parameters) {
+                // function body
+                return result;
+            }
+    Example:
+
+            function add(a, b) {
+                return a + b;
+            }
+            console.log(add(2, 3)); // Output: 5
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+->Anonymous Functions:(Not Hoisted)
+
+*These functions do not have a name and are often used as callbacks or immediately invoked function expressions (IIFE). 
+ They are usually assigned to a variable or passed as arguments.
+
+    Syntax:
+
+        const variableName = function(parameters) {
+            // function body
+            return result;
+        };
+    Example:
+
+        const multiply = function(a, b) {
+            return a * b;
+        };
+        console.log(multiply(2, 3)); // Output: 6
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+->Arrow Functions:(Not Hoisted)
+
+*Introduced in ES6, arrow functions provide a more concise syntax. They also handle the this keyword differently, binding it lexically (i.e., to the surrounding scope).
+
+    Syntax:
+
+        const functionName = (parameters) => {
+            // function body
+            return result;
+        };
+
+    Example:
+
+        const greet = name => `Hello, ${name}!`;
+        console.log(greet('Likith')); // Output: Hello, Likith
