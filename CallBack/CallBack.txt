@@ -1,0 +1,36 @@
+CallBack:
+
+*A callback is a function passed as an argument to another function, which is then invoked
+ inside the outer function to complete a specific task or action.
+*Callbacks allow you to handle asynchronous operations, ensuring that certain tasks are
+ completed before others, without blocking the execution of the program.
+
+->Synchronous CallBack:-
+
+    Example:-
+        function greet(name, callback) {
+            console.log("Hello, " + name);
+            callback();  // Calling the callback function
+        }
+
+        function sayGoodbye() {
+            console.log("Goodbye!");
+        }
+
+        greet("John", sayGoodbye);
+
+->Synchronous CallBack:-
+
+    Example:-
+        function fetchData(callback) {
+        setTimeout(() => {
+            console.log("Data fetched");
+            callback();  // Callback is called once the asynchronous task is done
+        }, 2000);
+        }
+
+        function processData() {
+            console.log("Processing data");
+        }
+
+        fetchData(processData);
