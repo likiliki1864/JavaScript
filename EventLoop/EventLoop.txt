@@ -1,0 +1,27 @@
+Event Loop: 
+*It is a part of JavaScript’s runtime that enables non-blocking, asynchronous operations.
+*It is responsible for handling and managing asynchronous tasks such as handling callbacks WebAPI's,
+ handling promises, and I/O operations while still allowing the main thread to continue executing code.
+*Continuously checks if the call stack is empty.
+*If it is, it processes tasks from the microtask queue first, followed by the task queue.
+
+ General terms in EventLoop:-
+
+->Call Stack: Where functions are executed one at a time.
+->Task Queue: Where callback functions from asynchronous tasks are placed.
+->Microtask Queue: Where promise callbacks and other microtasks are placed(higher priority).
+
+        Example:-
+            console.log("Start");
+
+            setTimeout(() => {
+                console.log("Task from setTimeout");
+            }, 0);
+
+            Promise.resolve().then(() => {
+                console.log("Microtask from Promise");
+            });
+
+            console.log("End");
+
+
