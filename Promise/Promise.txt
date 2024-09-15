@@ -1,0 +1,61 @@
+Promise:
+
+*A Promise in JavaScript is an object that represents the eventual completion of an
+ asynchronous operation and its resulting value. 
+*Promises provide a cleaner way to handle asynchronous tasks compared to traditional
+ callback functions, making code more readable and easier to maintain.
+*A promise is created using the Promise constructor, which takes a executor function as
+ an argument. This executor function has two arguments, "resolve" to mark the promise as
+ fulfilled and "reject" to mark it as rejected.
+
+->3 states of Promise:- 
+
+    -Pending: The initial state, neither fulfilled nor rejected.
+    -Fulfilled: The operation completed successfully and the promise is resolved with a value.
+    -Rejected: The operation failed and the promise is rejected with a reason.
+
+    Example:-
+        const myPromise = new Promise((resolve, reject) => {
+        let success = true;
+
+        if (success) {
+            resolve("Operation succeeded!");
+        } else {
+            reject("Operation failed!");
+        }
+        });
+
+        myPromise
+        .then(result => {
+            console.log(result);  // Logs: "Operation succeeded!" if resolved
+        })
+        .catch(error => {
+            console.log(error);  // Logs: "Operation failed!" if rejected
+        })
+        .finally(() => {
+            console.log("Promise completed");  // Always executed
+        });
+
+    Promise Methods:-
+        .then(): Attaches callbacks for success (resolve) and returns a new promise. It allows you to chain multiple asynchronous actions.
+        .catch(): Attaches a callback for handling errors.
+        .finally(): Attaches a callback that runs regardless of whether the promise was resolved or rejected.
+
+->Promises made by chaining:-
+    
+    Example:-
+            const promise1 = new Promise((resolve, reject) => {
+            resolve("First promise resolved");
+             });
+
+            promise1
+            .then(result => {
+                console.log(result); // Logs: "First promise resolved"
+                return "Second promise resolved";
+            })
+            .then(result => {
+                console.log(result); // Logs: "Second promise resolved"
+            })
+            .catch(error => {
+                console.error(error);
+            });
