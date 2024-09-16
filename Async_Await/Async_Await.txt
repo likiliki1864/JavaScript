@@ -1,0 +1,36 @@
+Async:
+*An Async function is a function that always returns a Promise.
+*If the function returns a value, the Promise is resolved with that value.
+*If the function throws an exception or returns an error, the Promise is rejected.
+
+Await:
+*The await keyword can only be used inside an async function.
+*It pauses the execution of the function until the promise is resolved or rejected.
+*While the function is waiting, other code continues to run.
+*Once the promise resolves, the result is assigned to the variable.
+
+    Syntax:
+        async function myFunction() {
+        let result = await somePromise;  // Waits until the promise resolves
+        console.log(result);  // Executes after the promise is resolved
+        }
+
+
+    Example:
+        function fetchData() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+            resolve("Data fetched!");
+            }, 2000);  // Simulate a 2-second network request
+        });
+        }
+
+        async function getData() {
+        console.log("Fetching data...");
+        
+        let result = await fetchData();  // Wait until fetchData resolves
+        console.log(result);  // Output: Data fetched!
+        }
+
+        getData();  // Output: Fetching data...
+                    // After 2 seconds: Data fetched!
