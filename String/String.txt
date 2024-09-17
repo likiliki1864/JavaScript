@@ -1,19 +1,19 @@
 charAt()
-Returns the character at a specified index.
+*Returns the character at a specified index.
 Syntax:
 string.charAt(index)
 Example:
 'hello'.charAt(1); 'e'
 
 charCodeAt()
-Returns the Unicode value of the character at a specified index.
+*Returns the Unicode value of the character at a specified index.
 Syntax:
 string.charCodeAt(index)
 Example:
 'hello'.charCodeAt(1); 101
 
 concat()
-Joins two or more strings and returns a new string.
+*Joins two or more strings and returns a new string.
 Syntax:
 string.concat(string2[, string3[, ...[, stringN]]])
 Example:
