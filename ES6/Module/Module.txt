@@ -1,0 +1,20 @@
+Module:
+*Allows for importing and exporting functions, objects, or variables across different files.
+
+    Syntax:
+
+        // In file.js
+        export const myVar = 'Hello';
+
+        // In another file
+        import { myVar } from './file.js';
+
+    Example:
+        // module1.js
+        export function sayHi() {
+        return 'Hi!';
+        }
+
+        // module2.js
+        import { sayHi } from './module1.js';
+        console.log(sayHi()); // "Hi!"
