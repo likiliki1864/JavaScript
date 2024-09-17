@@ -1,0 +1,10 @@
+Template Literal:
+*Allows for multi-line strings and interpolation of variables/expressions.
+        Syntax:
+
+            `Text with ${expression}`
+
+        Example:
+
+            const name = 'Likith';
+            console.log(`Hello, ${name}`); // "Hello, Likith"
