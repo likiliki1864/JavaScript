@@ -1,0 +1,167 @@
+charAt()
+Returns the character at a specified index.
+Syntax:
+string.charAt(index)
+Example:
+'hello'.charAt(1); 'e'
+
+charCodeAt()
+Returns the Unicode value of the character at a specified index.
+Syntax:
+string.charCodeAt(index)
+Example:
+'hello'.charCodeAt(1); 101
+
+concat()
+Joins two or more strings and returns a new string.
+Syntax:
+string.concat(string2[, string3[, ...[, stringN]]])
+Example:
+'hello'.concat(' ', 'world'); 'hello world'
+
+includes()
+Checks if a string contains a specified value.
+Syntax:
+string.includes(searchString[, position])
+Example:
+'hello world'.includes('world'); true
+
+indexOf()
+Returns the index of the first occurrence of a specified value.
+Syntax:
+string.indexOf(searchValue[, fromIndex])
+Example:
+'hello world'.indexOf('world'); 6
+
+lastIndexOf()
+Returns the index of the last occurrence of a specified value.
+Syntax:
+string.lastIndexOf(searchValue[, fromIndex])
+Example:
+'hello world hello'.lastIndexOf('hello'); 12
+
+localeCompare()
+Compares two strings in the current locale.
+Syntax:
+string.localeCompare(compareString[, locales[, options]])
+Example:
+'hello'.localeCompare('world'); -1 (less than)
+
+match()
+Searches a string for a match against a regular expression and returns the matches.
+Syntax:
+string.match(regexp)
+Example:
+'hello world'.match(/world/); ['world']
+
+padEnd()
+Pads the current string with another string until the resulting string reaches the given length.
+Syntax:
+string.padEnd(targetLength[, padString])
+Example:
+'hello'.padEnd(10, '*'); 'hello*****'
+
+padStart()
+Pads the current string with another string until the resulting string reaches the given length.
+Syntax:
+string.padStart(targetLength[, padString])
+Example:
+'hello'.padStart(10, '*'); '*****hello'
+
+repeat()
+Returns a new string with a specified number of copies of the original string.
+Syntax:
+string.repeat(count)
+Example:
+'hello'.repeat(3); 'hellohellohello'
+
+replace()
+Replaces a specified value with another value in a string.
+Syntax:
+string.replace(searchValue, newValue)
+Example:
+'hello world'.replace('world', 'there'); 'hello there'
+
+search()
+Searches a string for a match against a regular expression and returns the index of the match.
+Syntax:
+string.search(regexp)
+Example:
+'hello world'.search('world'); 6
+
+slice()
+Extracts a section of a string and returns it as a new string.
+Syntax:
+string.slice([begin[, end]])
+Example:
+'hello world'.slice(0, 5); 'hello'
+
+split()
+Splits a string into an array of substrings.
+Syntax:
+string.split([separator[, limit]])
+Example:
+'hello world'.split(' '); ['hello', 'world']
+
+substr()
+Returns a portion of the string, starting at the specified index and extending for a given number of characters.
+Syntax:
+string.substr(start[, length])
+Example:
+'hello world'.substr(6, 5); 'world'
+
+substring()
+Returns a substring between two indices.
+Syntax:
+string.substring(indexStart[, indexEnd])
+Example:
+'hello world'.substring(0, 5); 'hello'
+
+toLocaleLowerCase()
+Returns the calling string value converted to lower case, according to any locale-specific case mappings.
+Syntax:
+string.toLocaleLowerCase([locales[, options]])
+Example:
+'HELLO WORLD'.toLocaleLowerCase(); 'hello world'
+
+toLocaleUpperCase()
+Returns the calling string value converted to upper case, according to any locale-specific case mappings.
+Syntax:
+string.toLocaleUpperCase([locales[, options]])
+Example:
+'hello world'.toLocaleUpperCase(); 'HELLO WORLD'
+
+toLowerCase()
+Returns the calling string value converted to lower case.
+Syntax:
+string.toLowerCase()
+Example:
+'HELLO WORLD'.toLowerCase(); 'hello world'
+
+toString()
+Returns the string representation of the object.
+Syntax:
+object.toString()
+Example:
+(123).toString(); '123'
+
+toUpperCase()
+Returns the calling string value converted to upper case.
+Syntax:
+string.toUpperCase()
+Example:
+'hello world'.toUpperCase(); 'HELLO WORLD'
+
+trim()
+Removes whitespace from both ends of a string.
+Syntax:
+string.trim()
+Example:
+'   hello world   '.trim(); 'hello world'
+
+valueOf()
+Returns the primitive value of the specified object.
+Syntax:
+object.valueOf()
+Example:
+'hello'.valueOf(); 'hello'
