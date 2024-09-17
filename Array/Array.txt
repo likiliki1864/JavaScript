@@ -1,0 +1,383 @@
+Array.from()
+
+Creates a new array instance from an array-like or iterable object.
+
+Syntax:
+
+Array.from(arrayLike[, mapFn[, thisArg]])
+
+Example:
+
+Array.from('hello'); // ['h', 'e', 'l', 'l', 'o']
+
+Array.isArray()
+
+Checks if the given value is an array.
+
+Syntax:
+
+Array.isArray(value)
+
+Example:
+
+Array.isArray([1, 2, 3]); // true
+
+Array.of()
+
+Creates a new array instance with the specified elements.
+
+Syntax:
+
+Array.of(element0[, element1[, ...[, elementN]]])
+
+Example:
+
+Array.of(7); // [7]
+
+concat()
+
+Merges two or more arrays and returns a new array.
+
+Syntax:
+
+array1.concat(array2[, array3[, ...[, arrayN]]])
+
+Example:
+
+[1, 2].concat([3, 4]); // [1, 2, 3, 4]
+
+copyWithin()
+
+Shallow copies part of an array to another location in the same array.
+
+Syntax:
+
+array.copyWithin(target[, start[, end]])
+
+Example:
+
+[1, 2, 3, 4].copyWithin(2, 0); // [1, 2, 1, 2]
+
+entries()
+
+Returns a new array iterator object that contains key-value pairs for each index.
+
+Syntax:
+
+array.entries()
+
+Example:
+
+let iterator = ['a', 'b'].entries(); for (let e of iterator) console.log(e); // [0, 'a'], [1, 'b']
+
+every()
+
+Tests whether all elements pass the provided function.
+
+Syntax:
+
+array.every(callback(element[, index[, array]])[, thisArg])
+
+Example:
+
+[1, 2, 3].every(x => x > 0); // true
+
+fill()
+
+Fills all elements in an array with a static value.
+
+Syntax:
+
+array.fill(value[, start[, end]])
+
+Example:
+
+[1, 2, 3].fill(0); // [0, 0, 0]
+
+filter()
+
+Creates a new array with elements that pass the provided function.
+
+Syntax:
+
+array.filter(callback(element[, index[, array]])[, thisArg])
+
+Example:
+
+[1, 2, 3].filter(x => x > 1); // [2, 3]
+
+find()
+
+Returns the first element that satisfies the provided testing function.
+
+Syntax:
+
+array.find(callback(element[, index[, array]])[, thisArg])
+
+Example:
+
+[1, 2, 3].find(x => x > 1); // 2
+
+findIndex()
+
+Returns the index of the first element that satisfies the provided testing function.
+
+Syntax:
+
+array.findIndex(callback(element[, index[, array]])[, thisArg])
+
+Example:
+
+[1, 2, 3].findIndex(x => x > 1); // 1
+
+flat()
+
+Flattens a nested array into a single-level array.
+
+Syntax:
+
+array.flat([depth])
+
+Example:
+
+[1, [2, [3]]].flat(); // [1, 2, [3]]
+
+flatMap()
+
+Maps each element using a function and then flattens the result into a new array.
+
+Syntax:
+
+array.flatMap(callback(element[, index[, array]])[, thisArg])
+
+Example:
+
+[1, 2].flatMap(x => [x, x * 2]); // [1, 2, 2, 4]
+
+forEach()
+
+Executes a provided function once for each array element.
+
+Syntax:
+
+array.forEach(callback(element[, index[, array]])[, thisArg])
+
+Example:
+
+[1, 2, 3].forEach(x => console.log(x)); // Logs 1, 2, 3
+
+includes()
+
+Checks if an array contains a certain value.
+
+Syntax:
+
+array.includes(value[, fromIndex])
+
+Example:
+
+[1, 2, 3].includes(2); // true
+
+indexOf()
+
+Returns the first index at which a value occurs.
+
+Syntax:
+
+array.indexOf(searchElement[, fromIndex])
+
+Example:
+
+[1, 2, 3].indexOf(2); // 1
+
+join()
+
+Joins all elements of an array into a string.
+
+Syntax:
+
+array.join([separator])
+
+Example:
+
+[1, 2, 3].join('-'); // '1-2-3'
+
+keys()
+
+Returns a new array iterator that contains the keys for each index.
+
+Syntax:
+
+array.keys()
+
+Example:
+
+let keys = ['a', 'b'].keys(); for (let key of keys) console.log(key); // Logs 0, 1
+
+lastIndexOf()
+
+Returns the last index at which a value occurs.
+
+Syntax:
+
+array.lastIndexOf(searchElement[, fromIndex])
+
+Example:
+
+[1, 2, 3, 2].lastIndexOf(2); // 3
+
+map()
+
+Creates a new array with the results of calling a function on every element.
+
+Syntax:
+
+array.map(callback(element[, index[, array]])[, thisArg])
+
+Example:
+
+[1, 2, 3].map(x => x * 2); // [2, 4, 6]
+
+pop()
+
+Removes and returns the last element of an array.
+
+Syntax:
+
+array.pop()
+
+Example:
+
+[1, 2, 3].pop(); // 3, array becomes [1, 2]
+
+push()
+
+Adds one or more elements to the end of an array.
+
+Syntax:
+
+array.push(element1[, element2[, ...[, elementN]]])
+
+Example:
+
+[1, 2].push(3); // 3, array becomes [1, 2, 3]
+
+reduce()
+
+Reduces the array to a single value by applying a function.
+
+Syntax:
+
+array.reduce(callback(accumulator, element[, index[, array]])[, initialValue])
+
+Example:
+
+[1, 2, 3].reduce((acc, x) => acc + x, 0); // 6
+
+reduceRight()
+
+Reduces the array from right to left.
+
+Syntax:
+
+array.reduceRight(callback(accumulator, element[, index[, array]])[, initialValue])
+
+Example:
+
+[1, 2, 3].reduceRight((acc, x) => acc + x, 0); // 6
+
+reverse()
+
+Reverses the order of elements in the array.
+
+Syntax:
+
+array.reverse()
+
+Example:
+
+[1, 2, 3].reverse(); // [3, 2, 1]
+
+shift()
+
+Removes and returns the first element of an array.
+
+Syntax:
+
+array.shift()
+
+Example:
+
+[1, 2, 3].shift(); // 1, array becomes [2, 3]
+
+slice()
+
+Returns a shallow copy of a portion of an array.
+
+Syntax:
+
+array.slice([begin[, end]])
+
+Example:
+
+[1, 2, 3].slice(1, 3); // [2, 3]
+
+some()
+
+Tests whether at least one element passes the provided function.
+
+Syntax:
+
+array.some(callback(element[, index[, array]])[, thisArg])
+
+Example:
+
+[1, 2, 3].some(x => x > 2); // true
+
+sort()
+
+Sorts the elements of an array in place.
+
+Syntax:
+
+array.sort([compareFunction])
+
+Example:
+
+[3, 1, 2].sort(); // [1, 2, 3]
+
+splice()
+
+Adds or removes elements from an array.
+
+Syntax:
+
+array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+
+Example:
+
+[1, 2, 3].splice(1, 1); // [2], array becomes [1, 3]
+
+toLocaleString()
+
+Returns a localized string representing the elements.
+
+Syntax:
+
+array.toLocaleString([locales[, options]])
+
+Example:
+
+[1, 2, 3].toLocaleString(); // '1,2,3'
+
+toString()
+
+Converts the array to a string.
+
+Syntax:
+
+array.toString()
+
+Example:
+
+`[1, 2, 3].toString(); // '1,2,3'
