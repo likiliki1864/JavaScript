@@ -9,7 +9,7 @@ Event Loop:
 
 ->Call Stack: Where functions are executed one at a time.
 ->Task Queue: Where callback functions from asynchronous tasks are placed.
-->Microtask Queue: Where promise callbacks and other microtasks are placed(higher priority).
+->Job Queue: Where promise callbacks and other microtasks are placed(higher priority).
 
         Example:-
             console.log("Start");
