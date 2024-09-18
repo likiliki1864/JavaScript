@@ -1,11 +1,9 @@
 //Hoisting
 
-var x = 5;
-console.log(x); // 5
+console.log(hoistedVar); // Outputs: undefined
+var hoistedVar = 3;
 
-// Hoisting with function
-hello(); // 'Hello!'
-
-function hello() {
-  return 'Hello!';
+console.log(hoistedFunction()); // Outputs: "Hello!"
+function hoistedFunction() {
+    return "Hello!";
 }
