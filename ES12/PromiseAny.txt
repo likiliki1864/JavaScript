@@ -1,0 +1,10 @@
+Promise.any:
+
+* Returns the first promise that resolves, ignoring rejections.
+
+    Syntax:
+    Promise.any(promises)
+
+    Example:
+    const promises = [Promise.reject('error'), Promise.resolve(1)];
+    Promise.any(promises);
