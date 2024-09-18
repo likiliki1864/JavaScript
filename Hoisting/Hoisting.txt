@@ -1,0 +1,24 @@
+Hoisting:
+* Hoisting is a JavaScript mechanism where variable and function declarations are moved to the top of their containing scope before execution.
+
+    Syntax:
+    // Variable hoisting
+    console.log(a); // undefined
+    var a = 10;
+
+    // Function hoisting
+    greet();
+    function greet() {
+      return 'Hello!';
+    }
+
+    Example:
+    var x = 5;
+    console.log(x); // 5
+
+    // Hoisting with function
+    hello(); // 'Hello!'
+
+    function hello() {
+      return 'Hello!';
+    }
