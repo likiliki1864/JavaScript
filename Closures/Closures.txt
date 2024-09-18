@@ -1,0 +1,28 @@
+Closures:
+* A closure is a function that remembers its lexical scope even when the function is executed outside that scope.
+
+    Syntax:
+    function outerFunction() {
+      let outerVariable = 'I am outside!';
+
+      return function innerFunction() {
+        return outerVariable;
+      }
+    }
+
+    const closure = outerFunction();
+    closure(); // "I am outside!"
+
+    Example:
+    function createCounter() {
+      let count = 0;
+
+      return function() {
+        count++;
+        return count;
+      }
+    }
+
+    const counter = createCounter();
+    counter(); // 1
+    counter(); // 2
