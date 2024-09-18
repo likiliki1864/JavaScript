@@ -1,0 +1,11 @@
+Promise.finally():
+
+* Executes a function when the promise is settled, regardless of the outcome.
+
+    Syntax:
+    promise.finally(callback)
+
+    Example:
+    fetch('url')
+      .then(response => response.json())
+      .finally(() => 'Operation completed');
