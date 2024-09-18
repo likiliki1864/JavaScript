@@ -1,0 +1,9 @@
+RegExp Groups
+* Provides capturing groups in regular expressions for matching parts of a string.
+
+    Syntax:
+    /(group)/.exec(string)
+
+    Example:
+    const result = /(foo)/.exec('foobar');
+    result[1]; // "foo"      
