@@ -1,0 +1,8 @@
+Exponentiation Operator
+* Performs exponentiation using **.
+
+    Syntax:
+    base ** exponent
+
+    Example:
+    2 ** 3; // 8
