@@ -1,0 +1,8 @@
+Object.entries()
+* Returns an array of a given object's key-value pairs.
+
+    Syntax:
+    Object.entries(object)
+
+    Example:
+    const obj = { a: 1, b: 2 };
