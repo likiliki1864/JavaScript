@@ -1,0 +1,14 @@
+REPL:
+*Read-Eval-Print Loop in JavaScript is an interactive programming environment where you can write and execute JavaScript code in real-time.
+*It reads the input, evaluates the JavaScript code, prints the result, and then loops back to allow more input. 
+->Features of REPL:-
+    *Immediate Feedback: You see the result of your code right after entering it.
+    *Multiline Input: You can enter complex multi-line statements by pressing Shift+Enter.
+    *History: REPL keeps a history of commands, so you can cycle through them using the arrow keys.
+    *We can access this in node.js by opening terminal and entring just node.
+
+
+    Example:
+        > const x = 10;
+        > x * 2
+        20
