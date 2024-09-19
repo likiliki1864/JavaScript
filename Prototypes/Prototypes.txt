@@ -2,7 +2,7 @@ Prototypes:
 *A prototype in JavaScript is an object from which other objects inherit properties and methods. 
 *Every JavaScript object has a prototype, which acts as a template for the object.
 
-    Syntax:
+    Example:
 
         function Person(name, age) {
             this.name = name;
@@ -12,7 +12,6 @@ Prototypes:
         Person.prototype.sayHello = function() {
             console.log("Hello, my name is " + this.name);
         };
-    Example:
 
         const person1 = new Person("Likith", 25);`
         person1.sayHello(); // Output: Hello, my name is Likith
