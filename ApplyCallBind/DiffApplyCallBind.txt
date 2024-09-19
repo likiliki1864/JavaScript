@@ -1,0 +1,14 @@
+Difference b/w Call() - Apply() - Bind()
+-----------------------------------------
+Invocation Timing:
+*call() and apply() invoke the function immediately, whereas bind() returns a new function to be invoked later.
+
+Arguments Handling:
+*call() passes arguments individually, apply() passes them as an array, and bind() pre-sets arguments for future invocation.
+
+Return Value:
+*call() and apply() return the result of the invoked function, while bind() returns a new function with a bound context.
+
+Use Case:
+*Use call() for immediate function invocation with individual arguments, apply() for array-based arguments, and bind()
+ when you need to create a reusable function with a bound context.

@@ -1,0 +1,16 @@
+Bind:
+*Creates a new function with a specific this value and optional arguments, but doesn't invoke the function immediately.
+*It returns the function that can be invoked at any point of time that is required.
+    Syntax:
+        functionName.bind(thisArg, arg1, arg2, ...);
+
+    Example:
+
+        function showInfo(age) {
+            console.log(`${this.name} is ${age} years old`);
+        }
+
+        const person = { name: "LIKITH" };
+        const boundFunction = showInfo.bind(person, 22);
+
+        boundFunction(); // Output: "LIKITH is 22 years old"
