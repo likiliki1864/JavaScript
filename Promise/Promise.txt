@@ -14,7 +14,8 @@ Promise:
     -Fulfilled: The operation completed successfully and the promise is resolved with a value.
     -Rejected: The operation failed and the promise is rejected with a reason.
 
-    Example:-
+    
+Example:-
         const myPromise = new Promise((resolve, reject) => {
         let success = true;
 
@@ -43,7 +44,8 @@ Promise:
 
 ->Promises made by chaining:-
     
-    Example:-
+    
+Example:-
             const promise1 = new Promise((resolve, reject) => {
             resolve("First promise resolved");
              });
@@ -59,3 +61,98 @@ Promise:
             .catch(error => {
                 console.error(error);
             });
+
+Static Methods:-
+
+->Promise.all(iterable):
+*Resolves when all Promises in the iterable are fulfilled, or rejects if any Promise is rejected.
+
+
+Syntax:Promise.all([promise1, promise2]).then(results => {
+    // handle results
+}).catch(error => {
+    // handle error
+});
+
+Example:
+let promise1 = Promise.resolve(10);
+let promise2 = Promise.resolve(20);
+
+Promise.all([promise1, promise2]).then(values => {
+    console.log(values); // [10, 20]
+});
+
+->Promise.allSettled(iterable):
+*Resolves when all Promises are either fulfilled or rejected, returning an array of results.
+
+Syntax:Promise.allSettled([promise1, promise2]).then(results => {
+    // handle settled results
+});
+
+Example:
+let promise1 = Promise.resolve(10);
+let promise2 = Promise.reject(new Error("Failure"));
+
+Promise.allSettled([promise1, promise2]).then(results => {
+    console.log(results);
+    // [{status: "fulfilled", value: 10}, {status: "rejected", reason: Error: Failure}]
+});
+
+->Promise.any(iterable):
+*Resolves with the first fulfilled Promise or rejects if all Promises are rejected.
+
+Syntax:
+Promise.any([promise1, promise2]).then(result => {
+    // handle first resolved result
+}).catch(error => {
+    // handle all promises rejected
+});
+
+Example:
+let promise1 = Promise.reject("Error 1");
+let promise2 = Promise.resolve(20);
+
+Promise.any([promise1, promise2]).then(value => {
+    console.log(value); // 20
+});
+->Promise.race(iterable):
+*Resolves or rejects as soon as any Promise in the iterable is settled (resolved or rejected).
+
+Syntax:
+Promise.race([promise1, promise2]).then(result => {
+    // handle first settled result
+});
+
+Example:
+let promise1 = new Promise(resolve => setTimeout(resolve, 100, "slow"));
+let promise2 = new Promise(resolve => setTimeout(resolve, 50, "fast"));
+
+Promise.race([promise1, promise2]).then(value => {
+    console.log(value); // "fast"
+});
+
+->Promise.resolve(value):
+*Returns a Promise that is resolved with the given value.
+
+Syntax:
+Promise.resolve(value).then(result => {
+    // handle result
+});
+
+Example:
+Promise.resolve(42).then(value => {
+    console.log(value); // 42
+});
+
+->Promise.reject(reason):
+*Returns a Promise that is rejected with the given reason.
+
+Syntax:
+Promise.reject(reason).catch(error => {
+    // handle rejection
+});
+
+Example:
+Promise.reject(new Error("Failure")).catch(error => {
+    console.log(error.message); // "Failure"
+});

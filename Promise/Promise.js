@@ -47,3 +47,39 @@
     /* O/P:-
         First promise resolved
         Second promise resolved */
+
+// Promise.all() example
+
+    let Promise1 = Promise.resolve("Promise 1 resolved");
+    let promise2 = Promise.resolve("Promise 2 resolved");
+
+    Promise.all([Promise1, promise2]).then(
+    (results) => console.log("All resolved:", results),
+    (error) => console.error("One rejected:", error)
+    );
+
+// Promise.allSettled() example
+    Promise.allSettled([promise1, promise2]).then((results) => {
+    console.log("AllSettled Results:", results);
+    });
+
+// Promise.any() example
+    let promise3 = Promise.reject("Promise 3 rejected");
+
+    Promise.any([promise1, promise3])
+    .then((result) => console.log("First fulfilled:", result))
+    .catch(() => console.log("All promises rejected"));
+
+// Promise.race() example
+    Promise.race([promise1, promise3])
+    .then((result) => console.log("First settled:", result));
+
+// Promise.resolve() example
+    Promise.resolve("Immediate success").then((value) =>
+    console.log("Resolved with:", value)
+    );
+
+// Promise.reject() example
+    Promise.reject("Immediate failure").catch((reason) =>
+    console.error("Rejected with:", reason)
+    );
