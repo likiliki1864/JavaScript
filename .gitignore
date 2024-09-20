@@ -1,2 +1,10 @@
 Sample
 Sample/Sample.js
+*.temp
+*.log
+*.tmp
+*.cache
+*.swp
+*.bak
+tmp/
+cache/
