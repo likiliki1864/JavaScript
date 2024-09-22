@@ -31,30 +31,6 @@ let EmployeeType = ()=>{
 
 }
 
-let wagesForMonth = ()=>{
-
-    let TotalWages=0;
-    /* for(let i=1; i<=20; i++){
-        if(Attendance()==true){
-            TotalWages+= DailyWages;
-        }
-    } */
-    let workingDays =  0;
-    let workingHours = 0;
-    
-    while(workingDays <= 20 && workingHours < 100) {
-        workingDays++;
-        
-        if (Attendance()) {
-            workingHours += 8;
-            TotalWages += DailyWages;
-        }
-    }    
-
-    return TotalWages;
-
-}
-
 switch(EmployeeType()){
 
     case "fullTimeEmployee" : console.log("Employee Type : Full Time Employee\n");
@@ -67,6 +43,3 @@ switch(EmployeeType()){
                             break;                        
 
 }
-
-
-
