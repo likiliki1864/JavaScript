@@ -33,12 +33,22 @@ let EmployeeType = ()=>{
 
 let wagesForMonth = ()=>{
 
-    let TotalWages=0;
-    for(let i=1; i<=20; i++){
+    let TotalWages = 0;
+    let workingDays = 0;
+    let workingHours = 0;
+    /* for(let i=1; i<=20; i++){
         if(Attendance()==true){
             TotalWages+= DailyWages;
         }
-    }
+    } */
+        while(workingDays <= 20 && workingHours < 100) {
+            workingDays++;
+            if (Attendance()) {
+                workingHours += 8;
+                TotalWages += 160;
+            }
+        }
+
 
     return TotalWages;
 
@@ -56,6 +66,3 @@ switch(EmployeeType()){
                             break;                        
 
 }
-
-
-
