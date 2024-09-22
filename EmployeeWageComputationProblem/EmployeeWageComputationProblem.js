@@ -56,6 +56,3 @@ switch(EmployeeType()){
                             break;                        
 
 }
-
-
-
