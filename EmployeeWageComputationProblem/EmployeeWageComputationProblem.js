@@ -1,52 +1,18 @@
-class EmployeeWageComputation {
-    WagePerHour = 20;
-    FullDayHour = 8;
-    PartTimeHour = 8;
-    DailyWages = this.WagePerHour * 8;
-    Attendance = () => {
-        return Math.random() >= 0.5;
-    }
+console.log("Welcome to EmployeeWage Computation");
 
-    EmployeeType = () => {
-        return Math.random() >= 0.5 ? "fullTimeEmployee" : "partTimeEmployee";
-    }
-    WagesForMonth = () => {
-        let TotalWages = 0;
-        let workingDays = 0;
-        let workingHours = 0;
+const WagePerHour=20;
+const FullDayHour=8;
+const PartTimeHour=8;
 
-        while (workingDays <= 20 && workingHours < 100) {
-            workingDays++;
-            if (this.Attendance()) {
-                workingHours += 8;
-                TotalWages += this.DailyWages;
-            }
-        }
-        return TotalWages;
-    }
-    Display = () => {
-        console.log("\t\t\t Welcome to Employee Wage Computation");
-        console.log("--------------------------------------------------------------------------------------------");
+let Attendangtuce = ()=>{if(Math.random()>=0.5){
+                        console.log("Employee Present");
+                        return true;
+                        }           
+                    else{
+                        console.log("Employee Absent");
+                        return false;
+                        }
+                    }
 
-        if (this.Attendance()) {
-            console.log("\nEmployee : Present \n");
-        } else {
-            console.log("\nEmployee : Absent \n");
-        }
+Attendance();
 
-        const employeeType = this.EmployeeType();
-        switch (employeeType) {
-            case "fullTimeEmployee":
-                console.log("Employee Type : Full Time Employee\n");
-                console.log(`Daily Wages  : ${this.DailyWages}\n`);
-                console.log(`Monthly Wages : ${this.WagesForMonth()}`);
-                break;
-            case "partTimeEmployee":
-                console.log("Employee Type : Part Time Employee\n");
-                console.log(`Daily Wages  : ${this.DailyWages}\n`);
-                console.log(`Monthly Wages : ${this.WagesForMonth()}`);
-                break;
-        }
-    }
-}
-new EmployeeWageComputation().Display();
