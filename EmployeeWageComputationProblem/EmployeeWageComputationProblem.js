@@ -4,7 +4,7 @@ const WagePerHour=20;
 const FullDayHour=8;
 const PartTimeHour=8;
 
-let Attendangtuce = ()=>{if(Math.random()>=0.5){
+let Attendance = ()=>{if(Math.random()>=0.5){
                         console.log("Employee Present");
                         return true;
                         }           
@@ -15,4 +15,24 @@ let Attendangtuce = ()=>{if(Math.random()>=0.5){
                     }
 
 Attendance();
+
+let EmployeeType = ()=>{
+
+    if(Math.random()>=0.5)
+        return "fullTimeEmployee";         
+    else
+        return "partTimeEmployee";
+
+}
+
+switch(EmployeeType()){
+
+    case "fullTimeEmployee" : console.log("Full Time Employee");
+                            break;
+    case "partTimeEmployee" : console.log("Part Time Employee");
+                            break;                        
+
+}
+
+
 
